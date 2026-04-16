@@ -1,0 +1,54 @@
+$date
+   Thu Apr 16 15:11:48 2026
+$end
+
+$version
+  2024.1
+  $dumpfile ("alu.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_alu $end
+$var reg 32 ! a [31:0] $end
+$var reg 32 " b [31:0] $end
+$var reg 32 # result [31:0] $end
+$var reg 4 $ alu_ctrl [3:0] $end
+$var reg 1 % zero $end
+$scope module dut $end
+$var wire 32 & a [31:0] $end
+$var wire 32 ' b [31:0] $end
+$var wire 4 ( alu_ctrl [3:0] $end
+$var reg 32 # result [31:0] $end
+$var reg 1 % zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b101 !
+b11 "
+b1000 #
+b0 $
+0%
+b101 &
+b11 '
+b0 (
+$end
+
+#10000
+b10 #
+b1 $
+b1 (
+
+#20000
+b11111111111111111111111111111111 !
+b1 "
+b1 #
+b101 $
+b11111111111111111111111111111111 &
+b1 '
+b101 (
