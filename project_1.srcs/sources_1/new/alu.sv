@@ -4,7 +4,7 @@ module alu (
     input  logic [31:0] b,          // operand B (rs2 or i)
     input  logic [3:0]  alu_ctrl,   // select operation
     output logic [31:0] result,
-    output logic        zero        // zero flag
+    output logic zero        // zero flag
 );
 
     always_comb begin
