@@ -22,4 +22,10 @@ package riscv_pkg;
     localparam OPCODE_LUI    = 7'b0110111;
     localparam OPCODE_AUIPC  = 7'b0010111;
 
+    localparam IMM_I = 3'b000;
+    localparam IMM_S = 3'b001;
+    localparam IMM_B = 3'b010;
+    localparam IMM_U = 3'b011;
+    localparam IMM_J = 3'b100;
+
 endpackage
