@@ -69,7 +69,6 @@ module top (
     data_mem dmem ( .clk(clk), .we(mem_we), .funct3(funct3), .addr(alu_result), .wd(rd2), .rd(mem_rdata));
 
     // three way writeback mux
-    // Three way mux for writeback
     always_comb begin
         if (jump)
             wd = pc_plus4;          // jal/jalr save return address
