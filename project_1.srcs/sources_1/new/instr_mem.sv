@@ -5,7 +5,7 @@ module instr_mem (
     logic [31:0] mem [0:255]; //declaring a 256-entry array for 32 bit words
 
     initial begin
-        $readmemh("program.hex", mem); // loading instruction memory from hex file
+        $readmemh("C:/Users/rn4g24/Vivado/project_1/program.hex", mem); // loading instruction memory from hex file
     end
 
     assign inst = mem[addr[9:2]];

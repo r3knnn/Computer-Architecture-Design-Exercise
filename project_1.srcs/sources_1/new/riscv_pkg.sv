@@ -11,7 +11,7 @@ package riscv_pkg;
     localparam ALU_SRL  = 4'b1000;
     localparam ALU_SRA  = 4'b1001;
 
-    // You can add other constants here later e.g. opcodes
+    // Opcodes
     localparam OPCODE_RTYPE  = 7'b0110011;
     localparam OPCODE_ITYPE  = 7'b0010011;
     localparam OPCODE_LOAD   = 7'b0000011;
