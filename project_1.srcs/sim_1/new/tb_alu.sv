@@ -37,6 +37,18 @@ module tb_alu;
         a = 32'd5; b = 32'd3; alu_ctrl = ALU_SUB; #10;
         assert(result == 32'd2) else $error("SUB failed");
 
+        // test and: 1 AND 0
+        a = 32'd1; b = 32'd0; alu_ctrl = ALU_AND; #10;
+        assert(result == 32'd0) else $error("AND failed");
+        
+        // test or: 1 OR 0
+        a = 32'd1; b = 32'd0; alu_ctrl = ALU_OR; #10;
+        assert(result == 32'd1) else $error("OR failed");
+        
+        // test xor: 1 XOR 1
+        a = 32'd1; b = 32'd1; alu_ctrl = ALU_XOR; #10;
+        assert(result == 32'd0) else $error("XOR failed");
+        
         // test slt: -1 < 1 (signed)
         a = 32'hFFFFFFFF; b = 32'd1; alu_ctrl = ALU_SLT; #10;
         assert(result == 32'd1) else $error("SLT signed failed");
@@ -44,8 +56,6 @@ module tb_alu;
         // test zero flag
         a = 32'd7; b = 32'd7; alu_ctrl = ALU_SUB; #10;
         assert(zero == 1'b1) else $error("Zero flag failed");
-
-        $display("All tests passed!");
         $finish;
     end
 endmodule

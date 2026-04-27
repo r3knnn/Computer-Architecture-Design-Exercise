@@ -40,7 +40,7 @@ module tb_reg_file;
         // write 100 to x2
         rd = 5'd2; wd = 32'd100; we = 1; @(posedge clk); #1;
 
-        // tead back x1 and x2
+        // read back x1 and x2
         we = 0; rs1 = 5'd1; rs2 = 5'd2; #10;
         assert(rd1 == 32'd42)  else $error("x1 read failed");
         assert(rd2 == 32'd100) else $error("x2 read failed");
@@ -49,8 +49,6 @@ module tb_reg_file;
         rd = 5'd0; wd = 32'hFFFFFFFF; we = 1; @(posedge clk); #1;
         rs1 = 5'd0; #10;
         assert(rd1 == 32'd0) else $error("x0 not hardwired to 0");
-
-        $display("All register file tests passed!");
         $finish;
     end
 endmodule
