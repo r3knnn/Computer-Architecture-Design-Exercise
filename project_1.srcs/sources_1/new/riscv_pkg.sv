@@ -11,7 +11,7 @@ package riscv_pkg;
     localparam ALU_SRL  = 4'b1000;
     localparam ALU_SRA  = 4'b1001;
 
-    // Opcodes
+    // Opcodes funct7
     localparam OPCODE_RTYPE  = 7'b0110011;
     localparam OPCODE_ITYPE  = 7'b0010011;
     localparam OPCODE_LOAD   = 7'b0000011;
@@ -21,7 +21,7 @@ package riscv_pkg;
     localparam OPCODE_JALR   = 7'b1100111;
     localparam OPCODE_LUI    = 7'b0110111;
     localparam OPCODE_AUIPC  = 7'b0010111;
-
+    //Opcodes funct3
     localparam IMM_I = 3'b000;
     localparam IMM_S = 3'b001;
     localparam IMM_B = 3'b010;
